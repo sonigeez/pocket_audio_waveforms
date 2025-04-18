@@ -54,6 +54,9 @@ class _HomeState extends State<Home> {
 
   void _initialiseControllers() {
     recorderController = RecorderController();
+    recorderController.onAudioChunks.listen((event) {
+      print(event);
+    });
   }
 
   void _pickFile() async {
